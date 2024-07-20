@@ -1,0 +1,18 @@
+/* styles.css */
+.admin-card {
+    border: 2px solid darkviolet;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+  }
+  
+  .admin-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  

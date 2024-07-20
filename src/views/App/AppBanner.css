@@ -1,0 +1,118 @@
+/* AppBanner.css */
+
+.app-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-banners,
+.ads-banner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+}
+.banner-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(2px);
+  z-index: 0;
+}
+.edit-icon i {
+  font-size: 24px;
+  color: #fff; /* Adjust icon color as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity as needed */
+  padding: 5px;
+  border-radius: 50%;
+}
+.edit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.banner-box {
+  width: 200px;
+  height: 150px;
+  background-color: #f0e6ff;
+  border:1px solid #4a148c;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+  cursor:grab;
+
+}
+
+.banner-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+
+.upload-label input {
+  display: none;
+}
+
+  
+.upload-label-e {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #7b1fa2;
+}
+
+
+.upload-label-e input {
+  display: none;
+}
+
+.ads-icon,
+.session-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ads-icon i,
+.session-icon i {
+  color: #4a148c;
+}
+.session-creator{
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4a148c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #7b1fa2;
+}

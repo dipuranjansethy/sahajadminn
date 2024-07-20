@@ -1,0 +1,158 @@
+.single-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .single-product-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 80px;
+
+  }
+  
+  .single-product-images img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .single-product-details {
+    width: 100%;
+    text-align:left;
+
+  }
+  
+  .single-product-button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+    margin-top: 20px;
+  }
+  
+  .single-product-button svg {
+    margin-right: 5px;
+  }
+  .fullscreen-image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fullscreen-image-container {
+    position: relative;
+  }
+  
+  .fullscreen-image-container img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .close-fullscreen-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .category-details,
+  .subcategory-details {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .category-details h3,
+  .subcategory-details h3 {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .category-details ul,
+  .subcategory-details ul {
+    list-style: none;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  
+
+  }
+  
+  .category-details ul li,
+  .subcategory-details ul li {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #9f76d5;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #5d0df3;
+    margin-left: 10px;
+    box-shadow: 1px 2px 2px #000;
+
+
+  }
+  .single-product-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #f04f47;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+.single-product-delete .icon {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.single-product-delete:hover {
+  background-color: #c03e3d;
+}
+
+.single-product-delete:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Optional: if you specifically want the icon to be positioned in the top right of the button */
+.single-product-delete {
+  position: absolute;
+  top: 100px;
+  overflow: visible;
+  cursor: pointer;
+  right: 50px;
+  border-radius: 5px;
+}
+
+.single-product-delete .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #1b1b1b;
+  transform: translate(50%, -50%);
+}
