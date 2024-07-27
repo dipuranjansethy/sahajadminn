@@ -6,7 +6,7 @@ const ListSubadmins = () => {
   const [admins, setAdmins] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/admin/getalladmins')
+    axios.get('https://api.sahajnirman.com/admin/getalladmins')
       .then(response => {
         console.log(response.data);
         setAdmins(response.data);

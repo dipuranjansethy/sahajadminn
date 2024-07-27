@@ -13,7 +13,7 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/products/productsbyid/${id}`);
+        const response = await axios.get(`https://api.sahajnirman.com/products/productsbyid/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
@@ -45,7 +45,7 @@ const SingleProduct = () => {
   
     // Proceed with deletion after confirmation
     try {
-      const res = await axios.delete(`http://localhost:4000/products/products/${id}`); // Ensure the URL is correct
+      const res = await axios.delete(`https://api.sahajnirman.com/products/products/${id}`); // Ensure the URL is correct
       if (res.data.success === true) {
         window.history.back()
       } else {
