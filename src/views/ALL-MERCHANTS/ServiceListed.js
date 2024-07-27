@@ -41,7 +41,7 @@ const ProductsListed = () => {
           >
             <img
               className="product-card-img"
-              src={`https://sahajghar-img-backend.vercel.app/images/${product.imagesWithDescriptions[0].image}`}
+              src={`https://api.sahajnirman.com/banner/images/${product.imagesWithDescriptions[0].image}`}
               alt={product.imagesWithDescriptions[0].description}
             />
             <div className="product-details">

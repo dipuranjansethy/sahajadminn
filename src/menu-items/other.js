@@ -51,6 +51,14 @@ const other = {
       url: '/categories-control',
       icon: icons.IconApps,
       breadcrumbs: false
+    },
+    {
+      id: 'shopCategoryControl',
+      title: 'shop Category Control',
+      type: 'item',
+      url: '/shop-categories-control',
+      icon: icons.IconApps,
+      breadcrumbs: false
     }
   ]
 };

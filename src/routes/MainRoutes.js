@@ -32,6 +32,7 @@ import CreateSubAdmin from 'views/Subadmin/CreateSubAdmin';
 import ListSubadmins from 'views/Subadmin/ListSubadmins';
 import AppBanner from 'views/App/AppBanner';
 import CategoriesSelection from 'views/CategotyControl/CategoryControl';
+import ShopCategoriesSelection from 'views/ShopCategotyControl/ShopCategoryControl';
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -136,11 +137,15 @@ const MainRoutes = {
       path: '/app-banner',
       element: <AppBanner />
     },
+    
     {
       path: '/categories-control',
       element: <CategoriesSelection />
     },
-    
+    {
+      path: '/shop-categories-control',
+      element: <ShopCategoriesSelection />
+    },
   ]
 };
 

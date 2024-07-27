@@ -62,7 +62,7 @@ const SingleService = () => {
       {fullscreenImage && (
         <div className="fullscreen-image-overlay" onClick={handleCloseFullscreen}>
           <div className="fullscreen-image-container">
-            <img src={`https://sahajghar-img-backend.vercel.app/images/${fullscreenImage}`} alt="Fullscreen" />
+            <img src={`https://api.sahajnirman.com/banner/images/${fullscreenImage}`} alt="Fullscreen" />
             <button className="close-fullscreen-button" onClick={handleCloseFullscreen}>
               <AiOutlineClose />
             </button>
@@ -73,7 +73,7 @@ const SingleService = () => {
         {product.imagesWithDescriptions.map((img, index) => (
           <img
             key={index}
-            src={`https://sahajghar-img-backend.vercel.app/images/${img.image}`}
+            src={`https://api.sahajnirman.com/banner/images/${img.image}`}
             alt={img.description}
             onClick={() => handleImageClick(img.image)}
           />

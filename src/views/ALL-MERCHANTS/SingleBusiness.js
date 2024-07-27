@@ -161,7 +161,7 @@ const SingleBusiness = () => {
             <p style={{ fontSize: 18, fontWeight: 'bold', textDecoration: 'underline' }}>{String(description).toUpperCase()}</p>
 
             <img
-              src={`https://sahajghar-img-backend.vercel.app/images/${image}`}
+              src={`https://api.sahajnirman.com/banner/images/${image}`}
               alt={image}
               onClick={() => displayFullscreenImage(image)}
               onKeyDown={(e) => {
@@ -177,7 +177,7 @@ const SingleBusiness = () => {
 
       {fullscreenImage && (
         <div className="fullscreen" onClick={() => setFullscreenImage(null)}>
-          <img src={`https://sahajghar-img-backend.vercel.app/images/${fullscreenImage}`} alt="Fullscreen view" />
+          <img src={`https://api.sahajnirman.com/banner/images/${fullscreenImage}`} alt="Fullscreen view" />
           <button
             className="close-icon"
             onClick={(e) => {
