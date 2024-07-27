@@ -43,7 +43,7 @@ const ProductsListed = () => {
         <div onClick={()=>{
             navigate(`/product/${product._id}`)
         }} className="product-card" key={product._id}>
-          <img  className='product-card-img' src={`https://sahajghar-img-.vercel.app/images/${product.imagesWithDescriptions[0].image}`} alt={product.imagesWithDescriptions[0].description} />
+          <img  className='product-card-img' src={`https://api.sahajnirman.com/images/${product.imagesWithDescriptions[0].image}`} alt={product.imagesWithDescriptions[0].description} />
           <div className="product-details">
             <h2>{product.ProductName}</h2>
             <hr/>
