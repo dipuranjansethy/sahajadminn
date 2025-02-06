@@ -16,7 +16,7 @@ const SingleBusiness = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://sahajapi.vercel.app/merchant/api/businesses/${id}`);
+      const response = await axios.get(`https://sahajback.vercel.app/merchant/api/businesses/${id}`);
       setBusinessData(response.data);
       setLoading(false);
     } catch (error) {
@@ -57,7 +57,7 @@ const SingleBusiness = () => {
     if (!confirmDelete) return; // If user cancels, do nothing
     setloadingDelete(true);
     try {
-      await axios.delete(`https://sahajapi.vercel.app/merchant/API/businesses/${id}`);
+      await axios.delete(`https://sahajback.vercel.app/merchant/API/businesses/${id}`);
       console.log('Delete merchant with id:', id);
       setloadingDelete(false);
 
@@ -71,7 +71,7 @@ const SingleBusiness = () => {
   const handleActivate = async (id) => {
     try {
       setloadingActivate(true);
-      await axios.put(`https://sahajapi.vercel.app/merchant/verify/${id}`);
+      await axios.put(`https://sahajback.vercel.app/merchant/verify/${id}`);
       console.log('Activate merchant with id:', id);
       setloadingActivate(false);
       fetchData();
@@ -84,7 +84,7 @@ const SingleBusiness = () => {
   const handleDeactivate = async (id) => {
     try {
       setloadingDeactivate(true);
-      await axios.put(`https://sahajapi.vercel.app/merchant/unverify/${id}`);
+      await axios.put(`https://sahajback.vercel.app/merchant/unverify/${id}`);
       console.log('Deactivate merchant with id:', id);
       setloadingDeactivate(false);
       fetchData();
@@ -161,7 +161,7 @@ const SingleBusiness = () => {
             <p style={{ fontSize: 18, fontWeight: 'bold', textDecoration: 'underline' }}>{String(description).toUpperCase()}</p>
 
             <img
-              src={`https://api.sahajnirman.com/banner/images/${image}`}
+              src={`https://sahajback.vercel.app/banner/images/${image}`}
               alt={image}
               onClick={() => displayFullscreenImage(image)}
               onKeyDown={(e) => {
@@ -177,7 +177,7 @@ const SingleBusiness = () => {
 
       {fullscreenImage && (
         <div className="fullscreen" onClick={() => setFullscreenImage(null)}>
-          <img src={`https://api.sahajnirman.com/banner/images/${fullscreenImage}`} alt="Fullscreen view" />
+          <img src={`https://sahajback.vercel.app/banner/images/${fullscreenImage}`} alt="Fullscreen view" />
           <button
             className="close-icon"
             onClick={(e) => {

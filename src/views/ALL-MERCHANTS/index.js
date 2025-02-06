@@ -10,7 +10,7 @@ const MerchantsData = () => {
    const [loading, setloading] = useState(true)
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://sahajapi.vercel.app/merchant/API/businesses');
+      const response = await axios.get('https://sahajback.vercel.app/merchant/API/businesses');
       setMerchantsData(response.data)
       setloading(false)
     } catch (error) {

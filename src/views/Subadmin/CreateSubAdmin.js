@@ -20,7 +20,7 @@ const CreateSubAdmin = () => {
         userRead: userPermission === 'view',
       };
 
-      const response = await axios.post('https://sahajapi.vercel.app/admin/create-admin', { username, password, permissions });
+      const response = await axios.post('https://sahajback.vercel.app/admin/create-admin', { username, password, permissions });
       if(response.data.success === true){
         navigation('/subadmin-list')
       }

@@ -9,7 +9,7 @@ const ProductsListed = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://sahajapi.vercel.app/products/business-products/${id}`);
+        const response = await axios.get(`https://sahajback.vercel.app/products/business-products/${id}`);
         setProducts(response.data);
         setLoading(false);
       } catch (error) {
@@ -43,7 +43,7 @@ const ProductsListed = () => {
         <div onClick={()=>{
             navigate(`/product/${product._id}`)
         }} className="product-card" key={product._id}>
-          <img  className='product-card-img' src={`https://api.sahajnirman.com/banner/images/${product.imagesWithDescriptions[0].image}`} alt={product.imagesWithDescriptions[0].description} />
+          <img  className='product-card-img' src={`https://sahajback.vercel.app/banner/images/${product.imagesWithDescriptions[0].image}`} alt={product.imagesWithDescriptions[0].description} />
           <div className="product-details">
             <h2>{product.ProductName}</h2>
             <hr/>

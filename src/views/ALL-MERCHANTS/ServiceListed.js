@@ -11,7 +11,7 @@ const ProductsListed = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://sahajapi.vercel.app//services/business-services/${id}`);
+        const response = await axios.get(`https://sahajback.vercel.app/services/business-services/${id}`);
         setProducts(response.data);
         setLoading(false);
       } catch (error) {
@@ -41,7 +41,7 @@ const ProductsListed = () => {
           >
             <img
               className="product-card-img"
-              src={`https://api.sahajnirman.com/banner/images/${product.imagesWithDescriptions[0].image}`}
+              src={`https://sahajback.vercel.app/banner/images/${product.imagesWithDescriptions[0].image}`}
               alt={product.imagesWithDescriptions[0].description}
             />
             <div className="product-details">

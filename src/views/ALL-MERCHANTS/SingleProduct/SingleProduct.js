@@ -13,7 +13,7 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://api.sahajnirman.com/products/productsbyid/${id}`);
+        const response = await axios.get(`https://sahajback.vercel.app/products/productsbyid/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product:', error);
@@ -45,7 +45,7 @@ const SingleProduct = () => {
   
     // Proceed with deletion after confirmation
     try {
-      const res = await axios.delete(`https://api.sahajnirman.com/products/products/${id}`); // Ensure the URL is correct
+      const res = await axios.delete(`https://sahajback.vercel.app/products/products/${id}`); // Ensure the URL is correct
       if (res.data.success === true) {
         window.history.back()
       } else {
@@ -63,7 +63,7 @@ const SingleProduct = () => {
       {fullscreenImage && (
         <div className="fullscreen-image-overlay" onClick={handleCloseFullscreen}>
           <div className="fullscreen-image-container">
-            <img src={`https://api.sahajnirman.com/banner/images/${fullscreenImage}`} alt="Fullscreen" />
+            <img src={`https://sahajback.vercel.app/banner/images/${fullscreenImage}`} alt="Fullscreen" />
             <button className="close-fullscreen-button" onClick={handleCloseFullscreen}>
               <AiOutlineClose />
             </button>
@@ -74,7 +74,7 @@ const SingleProduct = () => {
         {product.imagesWithDescriptions.map((img, index) => (
           <img
             key={index}
-            src={`https://api.sahajnirman.com/banner/images/${img.image}`}
+            src={`https://sahajback.vercel.app/banner/images/${img.image}`}
             alt={img.description}
             onClick={() => handleImageClick(img.image)}
           />

@@ -8,7 +8,7 @@ const CategoriesSelection = () => {
   useEffect(() => {
     // Fetch the saved categories from the server when the component mounts
     console.log("Fetching categories from the server...");
-    axios.get('https://sahajapi.vercel.app/admin/categoriescontrol')
+    axios.get('https://sahajback.vercel.app/admin/categoriescontrol')
       .then(response => {
         console.log("Response from server:", response.data); // Check the structure of the response
         // Adjust the path based on the actual response structure
@@ -39,7 +39,7 @@ const CategoriesSelection = () => {
     }
 
     console.log("Saving categories to the server:", selectedCategories);
-    axios.post('https://sahajapi.vercel.app/admin/categoriescontrol', {
+    axios.post('https://sahajback.vercel.app/admin/categoriescontrol', {
       categories: selectedCategories
     })
     .then(response => {

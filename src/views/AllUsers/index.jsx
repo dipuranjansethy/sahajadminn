@@ -12,7 +12,7 @@ const UserData = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://sahajapi.vercel.app/user/getAllUsers');
+      const response = await axios.get('https://sahajback.vercel.app/user/getAllUsers');
       setMerchantsData(response.data);
     } catch (error) {
       console.error('Error fetching merchants data:', error);
@@ -41,7 +41,7 @@ const UserData = () => {
   const handleDelete = async (id) => {
     try {
       // Delete request using Axios
-      await axios.delete(`https://sahajapi.vercel.app/merchant/API/businesses/${id}`);
+      await axios.delete(`https://sahajback.vercel.app/merchant/API/businesses/${id}`);
 
       // Implement your delete logic here using the merchant id
       console.log('Delete merchant with id:', id);

@@ -74,7 +74,7 @@ const TotalOrderLineChartCard = ({ isLoading }) => {
  
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://sahajapi.vercel.app/user/getAllUsers');
+      const response = await axios.get('https://sahajback.vercel.app/user/getAllUsers');
       setMerchantsData(response.data);
     } catch (error) {
       console.error('Error fetching merchants data:', error);

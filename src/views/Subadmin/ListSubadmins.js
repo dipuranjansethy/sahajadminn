@@ -6,7 +6,7 @@ const ListSubadmins = () => {
   const [admins, setAdmins] = useState([]);
 
   useEffect(() => {
-    axios.get('https://api.sahajnirman.com/admin/getalladmins')
+    axios.get('https://sahajback.vercel.app/admin/getalladmins')
       .then(response => {
         console.log(response.data);
         setAdmins(response.data);

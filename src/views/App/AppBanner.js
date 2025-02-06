@@ -26,15 +26,15 @@ const AppBanner = () => {
   // useEffect(() => {
   //   const fetchBanners = async () => {
   //     try {
-  //       const response = await axios.get('https://api.sahajnirman.com/banner/get-all-banners');
+  //       const response = await axios.get('https://sahajback.vercel.app/banner/get-all-banners');
   //       const { homeBanners, adsBanners } = response.data;
 
   //       // Set home banners
   //       if (homeBanners.length !== 0 && adsBanners.length !== 0) {
-  //         setMainBanners(homeBanners.map((imageName) => `https://api.sahajnirman.com/banner/images/${imageName}`));
+  //         setMainBanners(homeBanners.map((imageName) => `https://sahajback.vercel.app/banner/images/${imageName}`));
 
   //         // Set ads banners
-  //         setAdsBanners(adsBanners.map((imageName) => `https://api.sahajnirman.com/banner/images/${imageName}`));
+  //         setAdsBanners(adsBanners.map((imageName) => `https://sahajback.vercel.app/banner/images/${imageName}`));
 
   //         setloading(false);
   //       } else {
@@ -51,13 +51,13 @@ const AppBanner = () => {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await axios.get('https://api.sahajnirman.com/banner/get-all-banners');
+        const response = await axios.get('https://sahajback.vercel.app/banner/get-all-banners');
         const { homeBanners, adsBanners } = response.data;
 
         if (homeBanners.length !== 0 && adsBanners.lenth !== 0) {
           // Function to convert image URL to base64 data URL
           const urlToBase64 = async (url) => {
-            const response = await axios.get(`https://api.sahajnirman.com/banner/images/${url}`, { responseType: 'blob' });
+            const response = await axios.get(`https://sahajback.vercel.app/banner/images/${url}`, { responseType: 'blob' });
             const blob = response.data;
             return new Promise((resolve, reject) => {
               const reader = new FileReader();
@@ -120,13 +120,13 @@ const AppBanner = () => {
 
     // Perform upload for mainBanners
     axios
-      .post('https://api.sahajnirman.com/banner/upload-banner-work', mainFormData)
+      .post('https://sahajback.vercel.app/banner/upload-banner-work', mainFormData)
       .then((mainResponse) => {
         console.log('Main banners uploaded successfully:', mainResponse.data);
         const mainBannerKeys = mainResponse.data.map((banner) => banner.key);
         // Request to save main banner keys
         axios
-          .post('https://api.sahajnirman.com/banner/save-homeBanner-banners', { homeBanner: mainBannerKeys })
+          .post('https://sahajback.vercel.app/banner/save-homeBanner-banners', { homeBanner: mainBannerKeys })
           .then((response) => {
             console.log('Main banners keys saved successfully:', response.data);
             toast.success('Home banners uploaded successfully');
@@ -144,13 +144,13 @@ const AppBanner = () => {
 
     // Perform upload for adsBanners
     axios
-      .post('https://api.sahajnirman.com/banner/upload-banner-work', adsFormData)
+      .post('https://sahajback.vercel.app/banner/upload-banner-work', adsFormData)
       .then((adsResponse) => {
         console.log('Ads banners uploaded successfully:', adsResponse.data);
         const adsBannerKeys = adsResponse.data.map((banner) => banner.key);
         // Request to save ads banner keys
         axios
-          .post('https://api.sahajnirman.com/banner/save-adsBanner-banners', { adsBanner: adsBannerKeys })
+          .post('https://sahajback.vercel.app/banner/save-adsBanner-banners', { adsBanner: adsBannerKeys })
           .then((response) => {
             console.log('Ads banners keys saved successfully:', response.data);
             toast.success('Ads banners uploaded successfully');

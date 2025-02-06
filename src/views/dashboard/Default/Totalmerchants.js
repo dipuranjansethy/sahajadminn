@@ -74,7 +74,7 @@ const TotalM = ({ isLoading }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://sahajapi.vercel.app/merchant/API/businesses');
+        const response = await axios.get('https://sahajback.vercel.app/merchant/API/businesses');
         // Assuming the response is an array of documents
         const count = response.data.length;
 
